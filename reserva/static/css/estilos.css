@@ -1,0 +1,198 @@
+
+/* reseteo de bordes por defecto de cualquier navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* la imagen se adpta a la pantalla */
+
+.banner {
+    height: 180vh;
+    background: url(../img_formulario/banner.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* aliniacion de fuente*/
+p{
+    text-align: center;
+    font-size: 17px;
+}
+
+/* ajuste de la caja sombra*/
+.sombra{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 70px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin: auto;
+}
+
+h1{
+    color: #ffff;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* ajustes del titulo del formulario*/
+.contenedor .form .form-header .form-title {
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 14px 0;
+}
+
+/* ajuste de la caja del formulario y sombra */
+.contenedor .form {
+    background: rgba(0, 0, 0, 0.6);
+    widows: 98%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px; 
+}
+
+/* ajuste de labels */
+.contenedor .form .form-label {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-family: Roboto;
+    position: relative;
+}
+
+
+/* ajustes de inputs y textarea*/
+.contenedor .form .form-input, .form-textarea {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #bdc7d1;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+/* contenido del textarea */
+.contenedor .form .form-textarea{
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;  
+}
+
+/* ajustes boton enviar */
+.contenedor .form .btn-submit {
+    width: 100%;
+    font-family: Roboto;
+    outline:  none;
+    background: #31384A;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    /* cambio del puntero al pasar por encima */
+    cursor: pointer;
+}
+
+/* cambio del color al pasar por encima del boton enviar */
+.contenedor .form .btn-submit:hover {
+    background: #f17b0d;
+}
+
+.form-input-rut{
+    width: 47%;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #bdc7d1;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+.form-input-dv{
+    width: 10%;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #bdc7d1;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+
+
+
+
+ /*CSS del menu*/
+    .menuCSS3 ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .menuCSS3 a {
+        display: block;
+        padding: 2em;
+        background-color: white;
+        text-decoration: none;
+        color: #663300;
+    }
+    .menuCSS3 a:hover {
+        background-color: #CC9966;
+    }
+    .menuCSS3 ul li ul {
+        display: none;
+    }
+    .menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+        display: block;
+    }
+
+    .menuCSS3{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    /*CSS termino del menu*/
+
+    }
+
+     /*CSS contenedor del contenido del cuerpo*/
+    .contenedor1{
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        
+    }
+    /*CSS termino del contenedor del cuerpo*/

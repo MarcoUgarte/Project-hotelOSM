@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- carga los archivos de la carpeta static -->
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Llama el css de la carpeta static -->
+    <link rel="stylesheet" href="{% static 'css/estilo_S.css' %}">
+    <!--Tipo responsive en forma cascada-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body >
+  <!--Configuracion del menu -->
+  <div class="contenedor1">
+    <nav class="menuCSS3">
+        <ul>
+            <!-- llama las url de las paginas html de template -->
+            <li><a href="{% url 'menu' %}">Hotel OSM</a></li>
+            <li><a href="{% url 'formulario' %}">Reservas</a>
+                <ul>
+                    <!-- llama las url de las paginas html de template -->
+                    <li><a href="{% url 'simple' %}">Simple</a></li>
+                    <li><a href="#">Doble</a></li>
+                    <li><a href="#">Delux</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Contacto</a>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+             <br><br><br><br><br><br><br><br><br>
+        <section id="main">
+
+            <!--Separa las Imagenes-->
+            <article class="col">
+                <!--Primera Imagen-->
+                <div class="image">
+                    <div class="container">
+                        <!-- Llama las imagenes guardadas en la carpeta static -->
+                        <img src="{% static 'img_S/1.jpg' %}" alt="" class="image">
+                            <div class="overlay">
+                                <div class="text">Cuenta con una gran vista y un gran</div>
+                                <div class="text1">servicio a habitación no desaproveches</div>
+                                <div class="text2">esta gran oportunidad.</div>
+                                <div class="text3"> por solo 45.990$ la noche</div>
+                            </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col">
+                <!--Seguna Imagen-->
+                <div class="img">
+                    <div class="container">
+                        <!-- Llama las imagenes guardadas en la carpeta static -->
+                        <img src="{% static 'img_S/2.jpg' %}" alt="" class="image">
+                            <div class="overlay">
+                                <div class="text">Espaciosa y con la hermosa adición de</div>
+                                <div class="text1">una gran terraza con comodas sillas</div>
+                                <div class="text2">ademas de televisión satelital</div>
+                                <div class="text3"> por solo 65.990$ la noche</div>
+                            </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col">
+                <div class="img">
+                    <!--Tercera Imagen-->
+                    <div class="container" >
+                        <!-- Llama las imagenes guardadas en la carpeta static -->
+                        <img src="{% static 'img_S/3.jpg' %}" alt="" class="image">
+                            <div class="overlay">
+                                <div class="text">Decoración novedosa y actualizada</div>
+                                <div class="text1">con un escritorio amplio y de buena</div>
+                                <div class="text2">calidad, para los mejores trabajos</div>
+                                <div class="text3"> por solo 35.990$ la noche</div>
+                            </div>
+                    </div>
+                    </div>
+            </article>
+        </section>
+    
+</body>
+</html>
+

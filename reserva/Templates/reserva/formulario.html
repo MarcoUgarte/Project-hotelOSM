@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- carga los archivos de la carpeta static -->
+<html lang="es">
+<head>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta charset="UTF-8">
+    <title>Formulario de Reserva</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Llama el css de la carpeta static -->
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <script src="{% static 'js/validar.js' %}"></script>
+</head>
+<!--Configuracion del menu -->
+  <div class="contenedor1">
+    <nav class="menuCSS3">
+        <ul>
+            <!-- llama las url de las paginas html de template -->
+            <li><a href="{% url 'menu' %}">Hotel OSM</a></li>
+            <li><a href="{% url 'formulario' %}">Reservas</a>
+                <ul>
+                    <!-- llama las url de las paginas html de template -->
+                    <li><a href="{% url 'simple' %}">Simple</a></li>
+                    <li><a href="#">Doble</a></li>
+                    <li><a href="#">Delux</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Contacto</a>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<section>
+        <div class="banner">
+            <div class="sombra">
+                <h1>¡ HAZ TU RESERVA !</h1>
+                <P>Ven y vive una experiencia unica</P>
+                <hr>
+                <div class="contenedor">
+                        <form action="" class="form" onsubmit="return validar();">
+                            <div class="form-header">
+                                <h1 class="form-title">Reserva</h1>
+                            </div>
+
+                            <label for="rut" class="form-label">Rut:</label>
+                            <input type="text" id="rut" class="form-input-rut" placeholder="Ingrese su rut sin puntos">
+                            <label for="guion">  -  </label>
+                            <input type="text" id="dv" class="form-input-dv">
+
+                            <label for="nombre" class="form-label">Nombres:</label>
+                            <input type="text" id="nombre" class="form-input" placeholder="Ingrese su nombre">
+                
+                            <label for="apellido" class="form-label">Apellidos:</label>
+                            <input type="text" id="apellido" class="form-input" placeholder="Ingrese su apellido">
+                
+                            <label for="correo" class="form-label">E-mail:</label>
+                            <input type="text" id="correo" class="form-input" placeholder="Ingrese su e-mail">
+                
+                            <label for="telefono" class="form-label">Telefono:</label>
+                            <input type="text" id="telefono" class="form-input" placeholder="Ingrese su telefono de contacto">
+                            
+                            <label for="habitacion" class="form-label">Tipo de habitacion</label>
+                            <hr>
+                            <br>
+                            <label for="simple" class="form-label"><input type="radio" id="simple" name="habitacion" class="form-radio"> Simple</label>
+                            <br>
+                
+                            <label for="doble" class="form-label"><input type="radio" id="double" name="habitacion" class="form-radio">Doble</label>
+                            <br>
+                
+                            <label for="delux" class="form-label"><input type="radio" id="delux" name="habitacion" class="form-radio">Delux</label>
+                            <br>
+                            <hr> 
+                            <br>
+                          
+                            <label for="mensaje" class="form-label">Mensaje:</label>
+                            <textarea id="mensaje" class="form-textarea" placeholder="Ingrese un mensaje (opcional)"></textarea>
+                
+                            <input type="submit" class="btn-submit" value="Realizar Reserva">
+                        </form>
+                
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</html>

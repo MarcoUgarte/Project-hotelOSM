@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- carga los archivos de la carpeta static -->
+{% load static %}
+<html lang="en">
+<meta charset="UTF-8">
+{% block content %}
+<head>
+	<title>Hotel OSM</title>
+  <!-- Llama el css de la carpeta static -->
+	<link rel="stylesheet" href="{% static 'css/styles_menu.css' %}">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+	<!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--JavaScrip-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!--tamaño de la imagen dentro del contenedor del carrucel-->
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 80%;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<!--Fondo de la pagina -->
+<!-- Llama las imagenes guardadas en la carpeta static -->
+<body background="{% static 'img/hotel1.jpg' %}" > 
+<!--Configuracion del menu -->
+  <div class="contenedor">
+	<nav class="menuCSS3">
+		<ul>
+      <!-- llama las url de las paginas html de template -->
+			<li><a href="{% url 'menu' %}">Hotel OSM</a></li>
+			<li><a href="{% url 'formulario' %}">Reservas</a>
+				<ul>
+          <!-- llama las url de las paginas html de template -->
+					<li><a href="{% url 'simple' %}">Simple</a></li>
+					<li><a href="#">Doble</a></li>
+					<li><a href="#">Delux</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Ayuda</a></li>
+			<li><a href="#">Contacto</a>
+				<ul>
+					<li><a href="#">Email</a></li>
+					<li><a href="#">Facebook</a></li>
+				</ul>
+
+			</li>
+		</ul>
+	</nav>
+
+</div>
+<!--termino de configuracion del menu-->
+
+<!--Carrucel-->
+ <div class="contenedor">
+                <br>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicadores -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+              
+                  <!-- Contenido del carrucel -->
+                  <div class="carousel-inner" role="listbox">
+              
+                    <div class="item active">
+                      <!-- Llama las imagenes guardadas en la carpeta static -->
+                          <a title="Simple" href="{% url 'simple' %}"><img  src="{% static 'img_carrucel/simple.jpg' %}" alt="Simple" style="widows: 500px;height:360px;"></a>
+                      <div class="carousel-caption">
+                        <h3>Habitaciones Simple</h3>
+                        <p class="centrar - color">Habitación simple para unas noches acogedoras</p>
+                      </div>
+                    </div>
+              
+                    <div class="item">
+                      <!-- Llama las imagenes guardadas en la carpeta static -->
+                          <a title="Doble" href=""><img src="{% static 'img_carrucel/doble2.jpg' %}" alt="Doble" style="widows: 500px;height:360px;"></a> 
+                      <div class="carousel-caption">
+                        <h3>Habitaciones Dobles</h3>
+                        <p class="centrar - color">Habitación doble para viajar en parejas</p>
+                      </div>
+                    </div>
+                  
+                    <div class="item">
+                      <!-- Llama las imagenes guardadas en la carpeta static -->
+                      <a title="Deluxe" href=""><img src="{% static 'img_carrucel/deluxe.jpg' %}" alt="Deluxe" style="widows: 500px;height:360px;"></a>
+                      <div class="carousel-caption">
+                        <h3>Habitaciones Deluxe</h3>
+                        <p class="centrar - color">Una gran habitación para noches de amor o asegurar el 110% de comodidad</p>
+                      </div>
+                    </div>
+                
+                  </div>
+              
+                  <!-- controladores del carrucel -->
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+<!--termino carrucel-->
+
+
+<!--Secciones en la pagina principal, la cual forma el cuerpo por medio de imagenes y fondos blancos-->
+     <section>
+     	<center>
+         <div class="menu_banner" >
+           
+             <div class="container1"> 
+               <h1 align="center" >Hotel OSM</h1>
+            
+    <tr >
+        <td id="texto-encima">
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img  id="imgsconfi" src="{% static 'img/piscina.jpg' %}" width="23%" height="20%"/>
+
+        </td>
+
+        <td>
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img id="imgsconfi" src="{% static 'img/cine.jpg' %}" width="50%" height="30%"/>
+        </td>
+        <td>
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img id="imgsconfi" src="{% static 'img/juego.jpg' %}" width="23%" height="20%"/>
+        </td>
+    </tr>
+
+             </div>
+             </center>
+     </section>
+               
+      <section>
+              <div class="menu_banner1">
+              
+              </div>
+      </section>
+ <!--termino de secciones en la pagina principal, la cual forma el cuerpo por medio de imagenes y fondos blancos-->
+
+
+<!--seccion de contacto-->
+      <section>
+              <div class="menu_banner2" >
+             <h1 align="center" >Contactos</h1>
+       <center>
+        <td id="texto-encima" align="left">
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img  id="imgsconfi" src="{% static 'img/ig.jpg' %}" width="250px" height="60%"/>
+
+        </td>
+
+        <td align="center">
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img id="imgsconfi" src="{% static 'img/gmail.jpg' %}" width="400px" height="60%"/>
+        </td>
+        <td align="right">
+          <!-- Llama las imagenes guardadas en la carpeta static -->
+            <img id="imgsconfi" src="{% static 'img/facebook.jpg' %}" width="300px" height="60%"/>
+        </td>
+    </tr>
+              </div>
+              </center>     
+    <tr >
+      </section>
+<!--seccion de termino de contacto-->
+
+
+
+</body>
+{% endblock %}
+
+
+
+
+</html>

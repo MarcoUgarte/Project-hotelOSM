@@ -1,0 +1,120 @@
+    /*CSS del menu*/
+    .menuCSS3 ul {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.menuCSS3 a {
+		display: block;
+		padding: 2em;
+		background-color: white;
+		text-decoration: none;
+		color: #663300;
+	}
+	.menuCSS3 a:hover {
+		background-color: #CC9966;
+	}
+	.menuCSS3 ul li ul {
+		display: none;
+	}
+	.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+		display: block;
+	}
+
+    .menuCSS3{
+   	position: fixed;
+   	z-index: 1000;
+   	top: 0;
+   	width: 100%;
+   	max-width: 1000px;
+    /*CSS termino del menu*/
+
+    }
+
+
+    /*CSS imagen y configuracion del cuerpo*/
+	body{
+    background-attachment: fixed;
+    background:"img/hotel1.jpg";
+    display: inline-block;
+    width: 100%;
+    margin: 10%;
+    height: 200px;
+
+    
+	}
+    /*CSS termino de configuracion del cuerpo*/
+
+
+    /*CSS contenedor del contenido del cuerpo*/
+	.contenedor{
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+		overflow: hidden;
+		padding: 40px;
+	}
+    /*CSS termino del contenedor del cuerpo*/
+
+
+/*CSS de las secciones de la pagina principal lac cual contiene las imagenes y trozos en blanco*/
+.menu_banner{
+  padding: 30px;
+    height: 90vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background:white;
+}
+
+.menu_banner1{
+  padding: 30px;
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/hotel2.jpg")
+}
+
+
+.menu_banner2{
+    padding: 2%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background:white;
+    
+}
+
+
+
+/*paading de las imagenes de las secciones de arriba*/
+#imgsconfi{
+
+    padding: 2%;
+    align-items: center;
+  
+    
+
+}
+
+
+.container1 {
+    position: relative;
+    width: 100%;
+  }
+
+
+/*INTENTO FRUSTADO DE COLOCAR UN TEXTO SOBRE UNA IMAGEN*/
+#texto-encima{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    background-color: white;
+    display: inline-block;
+
+}
